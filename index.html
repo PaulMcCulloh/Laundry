@@ -1,0 +1,447 @@
+<!doctype html><html><head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>Laundry Presets: Wash + Dry (Accordion)</title>
+
+<style>
+:root{
+  --bg:#0b0f14;
+  --card:#121823;
+  --card2:#0f1520;
+  --text:#e8eef6;
+  --muted:#a9b7c6;
+  --line:#223044;
+  --accent:#7cc4ff;
+  --pill:#1a2536;
+}
+*{box-sizing:border-box;}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.35;}
+.header{position:sticky;top:0;z-index:20;background:rgba(11,15,20,.92);backdrop-filter: blur(8px);border-bottom:1px solid var(--line);}
+.container{max-width:920px;margin:0 auto;padding:14px 14px;}
+h1{font-size:18px;margin:0 0 4px 0;letter-spacing:.2px;}
+.sub{color:var(--muted);font-size:12.5px;margin:0;}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{border:1px solid var(--line);background:var(--pill);color:var(--text);padding:8px 10px;border-radius:10px;font-size:13px;cursor:pointer}
+.btn:active{transform:translateY(1px)}
+.search{width:100%;margin-top:10px}
+.search input{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--card2);color:var(--text);font-size:14px;outline:none}
+.search input::placeholder{color:#7f92a8}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 12px;margin:12px 0;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.pill{background:var(--pill);border:1px solid var(--line);color:var(--muted);padding:4px 8px;border-radius:999px;font-size:12px}
+a{color:var(--accent)}
+details{border-radius:14px;}
+details > summary{list-style:none;cursor:pointer;display:flex;gap:10px;align-items:flex-start}
+details > summary::-webkit-details-marker{display:none}
+.summary-title{font-size:15px;font-weight:700;margin:0}
+.summary-desc{color:var(--muted);font-size:12.5px;margin:2px 0 0 0}
+.chev{margin-left:auto;color:var(--muted);font-size:14px;line-height:1;user-select:none}
+details[open] .chev{transform:rotate(90deg)}
+.section{margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+.section details{background:var(--card2);border:1px solid var(--line);border-radius:14px;padding:8px 10px}
+.section summary{align-items:center}
+.section h3{margin:0;font-size:13.5px}
+.table{width:100%;border-collapse:collapse;margin-top:6px}
+.table td{padding:8px 8px;vertical-align:top;border-top:1px solid rgba(255,255,255,.06);font-size:13px}
+.table td.k{width:170px;color:var(--text);font-weight:650}
+.small{color:var(--muted);font-size:12px;margin-top:6px}
+.hidden{display:none !important;}
+mark{background:rgba(124,196,255,.25);color:inherit;padding:0 2px;border-radius:4px}
+</style>
+
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0b0f14">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+</head><body>
+<div class='header'>
+  <div class='container'>
+    <h1>Laundry Presets: Wash + Dry</h1>
+    <p class='sub'>Accordion edition • Small GE HE washer • Drain-line suds workaround included • Updated: February 14, 2026</p>
+    <div class='toolbar'>
+      <button class='btn' id='expandAll'>Expand all scenarios</button>
+      <button class='btn' id='collapseAll'>Collapse all scenarios</button>
+      <button class='btn' id='expandWash'>Open all Wash</button>
+      <button class='btn' id='expandDry'>Open all Dry</button>
+      <button class='btn' id='collapseInner'>Close all Wash/Dry</button>
+    </div>
+    <div class='search'>
+      <input id='q' type='search' placeholder='Search (e.g., bleach, dog blankets, sanitize, 2 tsp)…'>
+    </div>
+    <p class='small'>Tip: This file works offline. Save it to your device and open in Chrome for fastest navigation.</p>
+  </div>
+</div>
+
+<div class='container' id='cards'>
+
+<div class='card scenario'>
+<details class='scenarioDetails' data-title='1. hot whites - heavily used'>
+<summary>
+<div><div class='summary-title'>1. Hot Whites - Heavily Used</div><div class='summary-desc'>White socks and frequently used bath towels.</div></div>
+<div class='chev'>›</div>
+</summary>
+<div class='section'>
+<details class='inner washDetails' open>
+<summary><h3>Wash</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Cycle</td><td>Whites / Heavy / Normal</td></tr>
+<tr><td class='k'>Temperature</td><td>Hot (use Sanitize only for illness/contamination loads)</td></tr>
+<tr><td class='k'>Spin</td><td>Extra-High</td></tr>
+<tr><td class='k'>Detergent</td><td>Tide Advanced Power Oxi</td></tr>
+<tr><td class='k'>Amount</td><td>2 to 2.5 tsp (small HE load)</td></tr>
+<tr><td class='k'>Bleach</td><td>Chlorine bleach: 4 to 5 tsp. Use bleach dispenser. Do not combine with Oxi powder.</td></tr>
+<tr><td class='k'>Extra Rinse</td><td>Yes. Recommended due to bleach odor/residue risk.</td></tr>
+<tr><td class='k'>Washer Quirk Fix</td><td>Run Drain &amp; Spin after the wash, then run Extra Rinse + High spin.</td></tr>
+<tr><td class='k'>Avoid</td><td>Lysol sanitizer (not needed with hot wash + bleach). Do not add vinegar.</td></tr>
+</table>
+</details>
+<div style='height:10px'></div>
+<details class='inner dryDetails' open>
+<summary><h3>Dry</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Dryer Heat</td><td>Hot</td></tr>
+<tr><td class='k'>Dry Level</td><td>Fully dry</td></tr>
+<tr><td class='k'>Notes</td><td>Shake items before drying. Clean lint filter for maximum airflow.</td></tr>
+</table>
+</details>
+</div>
+</details>
+</div>
+<div class='card scenario'>
+<details class='scenarioDetails' data-title='2. hot whites - lightly soiled / rare use'>
+<summary>
+<div><div class='summary-title'>2. Hot Whites - Lightly Soiled / Rare Use</div><div class='summary-desc'>Guest towels, backup linens that are basically clean.</div></div>
+<div class='chev'>›</div>
+</summary>
+<div class='section'>
+<details class='inner washDetails' open>
+<summary><h3>Wash</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Cycle</td><td>Normal</td></tr>
+<tr><td class='k'>Temperature</td><td>Hot</td></tr>
+<tr><td class='k'>Spin</td><td>High</td></tr>
+<tr><td class='k'>Detergent</td><td>Tide Free &amp; Gentle</td></tr>
+<tr><td class='k'>Amount</td><td>1.5 to 2 tsp</td></tr>
+<tr><td class='k'>Bleach</td><td>Optional: 3 to 4 tsp only if whitening is needed.</td></tr>
+<tr><td class='k'>Extra Rinse</td><td>Only if bleach odor remains or if skin is sensitive.</td></tr>
+<tr><td class='k'>Avoid</td><td>Lysol sanitizer; heavy enzyme/oxi detergents are unnecessary for this load.</td></tr>
+</table>
+</details>
+<div style='height:10px'></div>
+<details class='inner dryDetails' open>
+<summary><h3>Dry</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Dryer Heat</td><td>Medium-High</td></tr>
+<tr><td class='k'>Dry Level</td><td>Dry (avoid Extra Dry)</td></tr>
+<tr><td class='k'>Notes</td><td>Overdrying makes towels stiff and shortens pile life.</td></tr>
+</table>
+</details>
+</div>
+</details>
+</div>
+<div class='card scenario'>
+<details class='scenarioDetails' data-title='3. hot darks - heavily soiled'>
+<summary>
+<div><div class='summary-title'>3. Hot Darks - Heavily Soiled</div><div class='summary-desc'>Underwear and sleep T-shirts worn multiple nights (all cotton).</div></div>
+<div class='chev'>›</div>
+</summary>
+<div class='section'>
+<details class='inner washDetails' open>
+<summary><h3>Wash</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Cycle</td><td>Normal / Heavy</td></tr>
+<tr><td class='k'>Temperature</td><td>Hot</td></tr>
+<tr><td class='k'>Spin</td><td>High</td></tr>
+<tr><td class='k'>Detergent</td><td>Tide Advanced Power Oxi (preferred for body soil/odor)</td></tr>
+<tr><td class='k'>Amount</td><td>1.5 to 2 tsp</td></tr>
+<tr><td class='k'>Extra Rinse</td><td>Only if you see suds in the rinse or feel residue.</td></tr>
+<tr><td class='k'>Avoid</td><td>Bleach; Lysol sanitizer (hot water already covers hygiene).</td></tr>
+</table>
+</details>
+<div style='height:10px'></div>
+<details class='inner dryDetails' open>
+<summary><h3>Dry</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Dryer Heat</td><td>Medium</td></tr>
+<tr><td class='k'>Dry Level</td><td>Dry</td></tr>
+<tr><td class='k'>Notes</td><td>Remove promptly to reduce wrinkles and elastic stress.</td></tr>
+</table>
+</details>
+</div>
+</details>
+</div>
+<div class='card scenario'>
+<details class='scenarioDetails' data-title='4. cold darks - nice clothing'>
+<summary>
+<div><div class='summary-title'>4. Cold Darks - Nice Clothing</div><div class='summary-desc'>Black tees and pigment-sensitive garments you want to preserve.</div></div>
+<div class='chev'>›</div>
+</summary>
+<div class='section'>
+<details class='inner washDetails' open>
+<summary><h3>Wash</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Cycle</td><td>Delicate / Gentle</td></tr>
+<tr><td class='k'>Temperature</td><td>Cold</td></tr>
+<tr><td class='k'>Spin</td><td>Low</td></tr>
+<tr><td class='k'>Detergent</td><td>Woolite All Darks</td></tr>
+<tr><td class='k'>Amount</td><td>2 tsp</td></tr>
+<tr><td class='k'>Prep</td><td>Turn items inside out. Do not overload.</td></tr>
+<tr><td class='k'>Avoid</td><td>Bleach, Oxi powder, and Lysol sanitizer (all increase fading or residue risk).</td></tr>
+</table>
+</details>
+<div style='height:10px'></div>
+<details class='inner dryDetails' open>
+<summary><h3>Dry</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Dryer Heat</td><td>Low</td></tr>
+<tr><td class='k'>Dry Level</td><td>Damp-Dry (finish air-drying)</td></tr>
+<tr><td class='k'>Notes</td><td>Low heat is the single biggest win for color and fabric longevity.</td></tr>
+</table>
+</details>
+</div>
+</details>
+</div>
+<div class='card scenario'>
+<details class='scenarioDetails' data-title='5. warm / delicate (darks or lights)'>
+<summary>
+<div><div class='summary-title'>5. Warm / Delicate (Darks or Lights)</div><div class='summary-desc'>800-thread-count cotton pillowcases, delicate cottons, and sweaters.</div></div>
+<div class='chev'>›</div>
+</summary>
+<div class='section'>
+<details class='inner washDetails' open>
+<summary><h3>Wash</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Cycle</td><td>Delicate</td></tr>
+<tr><td class='k'>Temperature</td><td>Warm (or Cold if label requires)</td></tr>
+<tr><td class='k'>Spin</td><td>Low</td></tr>
+<tr><td class='k'>Detergent</td><td>Regular Woolite (or Tide Free &amp; Gentle for non-wool items if needed)</td></tr>
+<tr><td class='k'>Amount</td><td>1.5 to 2 tsp</td></tr>
+<tr><td class='k'>Avoid</td><td>Bleach, Oxi powder, and Lysol sanitizer.</td></tr>
+<tr><td class='k'>Notes</td><td>Use a mesh bag for sweaters if you have one.</td></tr>
+</table>
+</details>
+<div style='height:10px'></div>
+<details class='inner dryDetails' open>
+<summary><h3>Dry</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Pillowcases</td><td>Low heat; remove slightly damp to reduce creasing; finish air-dry.</td></tr>
+<tr><td class='k'>Sweaters</td><td>Do not tumble dry. Lay flat to dry.</td></tr>
+</table>
+</details>
+</div>
+</details>
+</div>
+<div class='card scenario'>
+<details class='scenarioDetails' data-title='6. warm white - allergy / medical items'>
+<summary>
+<div><div class='summary-title'>6. Warm White - Allergy / Medical Items</div><div class='summary-desc'>Hypoallergenic pillow covers and similar items when you want extra flushing.</div></div>
+<div class='chev'>›</div>
+</summary>
+<div class='section'>
+<details class='inner washDetails' open>
+<summary><h3>Wash</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Cycle</td><td>Normal</td></tr>
+<tr><td class='k'>Temperature</td><td>Warm</td></tr>
+<tr><td class='k'>Spin</td><td>High</td></tr>
+<tr><td class='k'>Detergent</td><td>Tide Free &amp; Gentle</td></tr>
+<tr><td class='k'>Amount</td><td>2 tsp</td></tr>
+<tr><td class='k'>Extra Rinse</td><td>Yes.</td></tr>
+<tr><td class='k'>Washer Quirk Fix</td><td>Run Drain &amp; Spin before the extra rinse to clear retained suds/soap.</td></tr>
+<tr><td class='k'>Bleach</td><td>Usually avoid. If needed: 3 to 4 tsp max.</td></tr>
+<tr><td class='k'>Sanitizer</td><td>Use only if you must wash cold/warm for a hygiene reason and cannot use hot/sanitize.</td></tr>
+</table>
+</details>
+<div style='height:10px'></div>
+<details class='inner dryDetails' open>
+<summary><h3>Dry</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Dryer Heat</td><td>Medium-High</td></tr>
+<tr><td class='k'>Dry Level</td><td>Fully dry</td></tr>
+<tr><td class='k'>Notes</td><td>Avoid dryer sheets (can irritate sensitive skin).</td></tr>
+</table>
+</details>
+</div>
+</details>
+</div>
+<div class='card scenario'>
+<details class='scenarioDetails' data-title='7. dog blankets (polyester) - allergen control mode'>
+<summary>
+<div><div class='summary-title'>7. Dog Blankets (Polyester) - Allergen Control Mode</div><div class='summary-desc'>After flare-ups, scratching episodes, or suspected allergen exposure.</div></div>
+<div class='chev'>›</div>
+</summary>
+<div class='section'>
+<details class='inner washDetails' open>
+<summary><h3>Wash</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Cycle</td><td>Normal</td></tr>
+<tr><td class='k'>Temperature</td><td>Hot</td></tr>
+<tr><td class='k'>Spin</td><td>High</td></tr>
+<tr><td class='k'>Detergent</td><td>Tide Free &amp; Gentle</td></tr>
+<tr><td class='k'>Amount</td><td>2 to 2.5 tsp</td></tr>
+<tr><td class='k'>Avoid</td><td>Bleach and Lysol sanitizer (not needed here). Avoid dryer sheets.</td></tr>
+<tr><td class='k'>Notes</td><td>Clean the lint filter before running the washer/dryer cycle set.</td></tr>
+</table>
+</details>
+<div style='height:10px'></div>
+<details class='inner dryDetails' open>
+<summary><h3>Dry</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Dryer Heat</td><td>Medium-High (or Hot if needed)</td></tr>
+<tr><td class='k'>Dry Level</td><td>Fully dry</td></tr>
+<tr><td class='k'>Notes</td><td>Full drying is part of allergen control; shake blankets before loading.</td></tr>
+</table>
+</details>
+</div>
+</details>
+</div>
+<div class='card scenario'>
+<details class='scenarioDetails' data-title='8. dog blankets (polyester) - normal heavy soil'>
+<summary>
+<div><div class='summary-title'>8. Dog Blankets (Polyester) - Normal Heavy Soil</div><div class='summary-desc'>Daily-use blankets that get quite dirty, but no special allergy event.</div></div>
+<div class='chev'>›</div>
+</summary>
+<div class='section'>
+<details class='inner washDetails' open>
+<summary><h3>Wash</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Cycle</td><td>Normal</td></tr>
+<tr><td class='k'>Temperature</td><td>Warm or Hot</td></tr>
+<tr><td class='k'>Spin</td><td>High</td></tr>
+<tr><td class='k'>Detergent</td><td>Tide Free &amp; Gentle (default) or Tide Advanced Power Oxi (low dose)</td></tr>
+<tr><td class='k'>Amount</td><td>2 tsp (or 1.5 tsp if using Power Oxi)</td></tr>
+<tr><td class='k'>Avoid</td><td>Bleach; Lysol sanitizer unless illness/contamination.</td></tr>
+<tr><td class='k'>Notes</td><td>Do not overload; soil removal needs water exchange in HE machines.</td></tr>
+</table>
+</details>
+<div style='height:10px'></div>
+<details class='inner dryDetails' open>
+<summary><h3>Dry</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Dryer Heat</td><td>Medium</td></tr>
+<tr><td class='k'>Dry Level</td><td>Dry</td></tr>
+<tr><td class='k'>Notes</td><td>Medium heat avoids polyester glazing and preserves softness.</td></tr>
+</table>
+</details>
+</div>
+</details>
+</div>
+<div class='card scenario'>
+<details class='scenarioDetails' data-title='9. sanitize load - illness / contamination event'>
+<summary>
+<div><div class='summary-title'>9. Sanitize Load - Illness / Contamination Event</div><div class='summary-desc'>Use when someone is sick, or for fecal contamination/pet accidents/mold exposure textiles.</div></div>
+<div class='chev'>›</div>
+</summary>
+<div class='section'>
+<details class='inner washDetails' open>
+<summary><h3>Wash</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Cycle</td><td>Sanitize (or the machine's sanitize cycle)</td></tr>
+<tr><td class='k'>Temperature</td><td>Sanitize</td></tr>
+<tr><td class='k'>Spin</td><td>High</td></tr>
+<tr><td class='k'>Detergent</td><td>Tide Free &amp; Gentle or Tide Advanced Power Oxi</td></tr>
+<tr><td class='k'>Amount</td><td>2 tsp</td></tr>
+<tr><td class='k'>Bleach</td><td>Optional: 3 to 4 tsp if items are white and bleach-safe.</td></tr>
+<tr><td class='k'>Extra Rinse</td><td>Recommended. Use Drain &amp; Spin first if your washer retains suds.</td></tr>
+<tr><td class='k'>Avoid</td><td>Lysol sanitizer (sanitize cycle replaces it).</td></tr>
+</table>
+</details>
+<div style='height:10px'></div>
+<details class='inner dryDetails' open>
+<summary><h3>Dry</h3><div class='chev'>›</div></summary>
+<table class='table'>
+<tr><td class='k'>Dryer Heat</td><td>Medium-High</td></tr>
+<tr><td class='k'>Dry Level</td><td>Fully dry</td></tr>
+<tr><td class='k'>Notes</td><td>Heat + full dryness helps complete the hygiene goal.</td></tr>
+</table>
+</details>
+</div>
+</details>
+</div>
+
+</div>
+
+<script>
+const $ = (s, el=document)=>el.querySelector(s);
+const $$ = (s, el=document)=>Array.from(el.querySelectorAll(s));
+
+function setAllScenario(open){
+  $$('.scenarioDetails').forEach(d=>d.open=open);
+}
+function setAllInner(which, open){
+  const sel = which==='wash' ? '.washDetails' : which==='dry' ? '.dryDetails' : '.inner';
+  $$(sel).forEach(d=>d.open=open);
+}
+
+$('#expandAll').addEventListener('click', ()=>setAllScenario(true));
+$('#collapseAll').addEventListener('click', ()=>setAllScenario(false));
+$('#expandWash').addEventListener('click', ()=>setAllInner('wash', true));
+$('#expandDry').addEventListener('click', ()=>setAllInner('dry', true));
+$('#collapseInner').addEventListener('click', ()=>setAllInner('all', false));
+
+function clearMarks(node){
+  // remove <mark> by replacing with its text
+  $$('mark', node).forEach(m=>{
+    const t=document.createTextNode(m.textContent);
+    m.replaceWith(t);
+  });
+}
+
+function markText(el, q){
+  if(!q) return;
+  const walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+  const texts=[];
+  while(walk.nextNode()) texts.push(walk.currentNode);
+  texts.forEach(tn=>{
+    const txt = tn.nodeValue;
+    const idx = txt.toLowerCase().indexOf(q);
+    if(idx===-1) return;
+    const before = txt.slice(0, idx);
+    const mid = txt.slice(idx, idx+q.length);
+    const after = txt.slice(idx+q.length);
+    const frag = document.createDocumentFragment();
+    if(before) frag.appendChild(document.createTextNode(before));
+    const m = document.createElement('mark'); m.textContent = mid; frag.appendChild(m);
+    if(after) frag.appendChild(document.createTextNode(after));
+    tn.replaceWith(frag);
+  });
+}
+
+$('#q').addEventListener('input', (e)=>{
+  const qRaw = e.target.value.trim().toLowerCase();
+  const cards = $$('.card');
+  cards.forEach(c=>{
+    clearMarks(c);
+    c.classList.remove('hidden');
+  });
+  if(!qRaw){
+    return;
+  }
+  cards.forEach(c=>{
+    const hay = c.textContent.toLowerCase();
+    if(hay.indexOf(qRaw) === -1){
+      c.classList.add('hidden');
+    }else{
+      // expand matching scenario and highlight first occurrence
+      const det = $('.scenarioDetails', c);
+      det.open = true;
+      // open wash/dry so you can see match
+      $$('.inner', c).forEach(d=>d.open=true);
+      markText(c, qRaw);
+    }
+  });
+});
+</script>
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(()=>{});
+  });
+}
+</script>
+
+</body></html>
